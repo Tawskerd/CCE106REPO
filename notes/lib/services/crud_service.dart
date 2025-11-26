@@ -37,8 +37,7 @@ class CrudService {
 }
 
 Stream<QuerySnapshot> getFavorites() {
-  return items.where('favorite', isEqualTo: true)
-      .orderBy('createdAt', descending: true)
+  return items.where('favorite', isEqualTo: true) 
       .snapshots();
 }
 

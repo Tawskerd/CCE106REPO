@@ -48,7 +48,7 @@ class _HomePageState extends State<HomePage> {
   stream: showFavorites ? service.getFavorites() : service.getItems(),
   builder: (context, snapshot) {
     if (!snapshot.hasData) {
-      return const Center(child: CircularProgressIndicator());
+      return const Center();
     }
 
     final docs = snapshot.data!.docs;
