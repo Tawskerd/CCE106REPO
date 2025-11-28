@@ -43,7 +43,9 @@ class _LoginPageState extends State<LoginPage> {
                     : const Text("Login"),
                 onPressed: () async {
                   if (emailCtrl.text.isEmpty ||
-                      passwordCtrl.text.isEmpty) return;
+                      passwordCtrl.text.isEmpty) {
+                    return;
+                  }
 
                   setState(() => loading = true);
 

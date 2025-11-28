@@ -3,6 +3,8 @@ import 'package:notes/auth_service.dart';
 import 'package:notes/login_page.dart'; // make sure you have this file
 
 class RegisterPage extends StatefulWidget {
+  const RegisterPage({super.key});
+
   @override
   _RegisterPageState createState() => _RegisterPageState();
 }
@@ -42,8 +44,9 @@ class _RegisterPageState extends State<RegisterPage> {
                       )
                     : Text('Register'),
                 onPressed: () async {
-                  if (emailCrtl.text.isEmpty || passwordCtrl.text.isEmpty)
+                  if (emailCrtl.text.isEmpty || passwordCtrl.text.isEmpty) {
                     return;
+                  }
 
                   setState(() => loading = true);
 
